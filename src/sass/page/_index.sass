@@ -440,3 +440,71 @@
         a
             display: block
             img
+
+.footer
+    background-color: #0eb493
+    padding: 100px 0 77px 0
+    &-body
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        align-content: space-between
+        &__item
+            width: 23%
+            height: 200px
+            
+
+.footer-body__item
+    display: flex
+    flex-direction: column 
+    justify-content: space-between
+    align-content: space-between 
+    .footer-title
+        padding-bottom: 22px
+        +rfs(16px) 
+        font-weight: bold
+        line-height: 1.71
+        color: rgba(255, 255, 255, 0.8)
+    .text-section
+        +rfs(14px) 
+        line-height: 1.85
+        color: #ffffff
+    .footer-input
+        width: 100%
+        padding: 10px 5px
+        border-radius: 1.5px;
+        border: solid 1px #ffffff;
+        background-color: rgba(0,0,0,0);
+        color: #fff
+    .copyright-section
+        padding-top: 75px 
+        +rfs(14px) 
+        line-height: 1.85
+        color: #ffffff
+        a
+            color: #062033
+            text-decoration: none
+    .copyrights-name
+        +rfs(14px)  
+        line-height: 1.85
+        color: #062033
+
+.footer-item__list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    a
+        text-decoration: none
+        +rfs(14px) 
+        line-height: 1.85
+        color: #ffffff
+
+.footer-body__input
+    position: relative
+
+.fa-arrow-right
+    position: absolute
+    top: 12px
+    right: 12px
+    color: rgba(255,255,255,0.5)
