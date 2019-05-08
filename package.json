@@ -54,6 +54,7 @@
     "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
+    "jquery": "^3.4.1",
     "node-sass-tilde-importer": "^1.0.2",
     "require-dir": "^1.2.0",
     "rfs": "^8.0.4",

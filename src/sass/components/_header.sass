@@ -4,9 +4,12 @@
   left: 0
   top: 0
   padding: 23px 0
+  z-index: 100
   &-body
     display: flex
     align-items: center
+    +r(sm)
+      flex-wrap: wrap
     &__logo
       .__logo
         display: block
@@ -30,15 +33,78 @@
         +rfs(16px)
         color: rgba(255,255,255,0.3)
     &__nav
+      +r(sm)
+        width: 100%
+        overflow: hidden
+        transition: all .4s
+        max-height: 0
 
 .header-nav
   display: flex
   align-items: center
-  justify-content: center
+  justify-content: space-between
+  +r(sm)
+    flex-direction: column
+    height: 80vh
+    padding: 10vh 0
   &__item
+    +r(sm)
+        margin-bottom: 35px
+        &:last-child
+          margin-bottom: 0
     a
       +rfs(13px)
       letter-spacing: 0.3px;
       color: #ffffff;
       text-decoration: none
       padding: 5px 10px
+      +r(sm)
+        color: #0eb493
+        +rfs(40px)
+.header-burger
+  background: none
+  border: none
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  width: 30px
+  height: 18px
+  position: relative
+  transition: all .4s
+  +r(sm)
+    display: flex
+  &__line
+    display: inline-block
+    width: 30px
+    height: 2px
+    background: #ffffff
+    border-radius: 3px
+
+.mask
+  display: inline-block
+  position: fixed
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.8) 100%)
+  z-index: 1
+  transition: all .25s
+  opacity: 0
+  transform: translateY(-100%)
+  &.is-active
+    opacity: 1
+    transform: translateY(0)
+
+// is-active menu
+.header-body.is-active
+  .header-burger
+    .header-burger__line
+      background: #0eb493
+    .header-body__nav
+        +r(sm)
+          max-height: 110vh
+
+  .header-body__nav.is-active
+        overflow: visible

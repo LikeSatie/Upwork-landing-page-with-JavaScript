@@ -1,3 +1,5 @@
-// =require components/1.js
+//=require components/**.*
 
-console.log('1');
+$(window).ready(function() {
+  menuShow();
+});
