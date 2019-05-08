@@ -36,7 +36,7 @@
       +r(sm)
         width: 100%
         overflow: hidden
-        transition: all .4s
+        transition: all .5s
         max-height: 0
 
 .header-nav
@@ -88,7 +88,7 @@
   height: 100%
   left: 0
   top: 0
-  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.97) 86%, rgba(255,255,255,0.8) 100%)
+  background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.99) 85%, rgba(255,255,255,0.8) 100%)
   z-index: 1
   transition: all .25s
   opacity: 0
@@ -96,15 +96,23 @@
   &.is-active
     opacity: 1
     transform: translateY(0)
+    transition: all .25s
 
 // is-active menu
 .header-body.is-active
+  .header-body__search
+    input
+      +r(sm)
+        color: #0eb493
+        border: 1px solid #0eb493
+        border-radius: 3px
+    input[type="text"]::placeholder
+      color: #bbb
   .header-burger
     .header-burger__line
       background: #0eb493
     .header-body__nav
         +r(sm)
           max-height: 110vh
-
   .header-body__nav.is-active
         overflow: visible
